@@ -1,0 +1,154 @@
+/* CSS code for body and background */
+body {
+    background-color: #0f120f; /* Sets the background color to a light gray */
+    background-image: url('blue.png'); /* Sets the background image */
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    font-family: Ubuntu ; /* Sets the font family to Arial or a sans-serif font */
+    color: #f7f0f0; /* Sets the default text color to dark gray */
+}
+
+
+h1,h2,h3,h4,h5{
+    font-weight: normal;
+    margin:0;
+}
+
+a,a:hover,a:visited{
+    color:#fff;
+    text-decoration: none;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div.wrapper h1{
+    text-align:center;
+    margin: 100px auto;
+    font-size: 2.4em;
+    
+    
+}
+div.wrapper h2{
+    text-align:center;
+    margin: 100px auto;
+    font-size: 2em;
+    
+}
+header{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 0;
+    
+}
+nav{
+    justify-self:end;
+}
+nav li{
+    display:inline-block;
+    margin-left:25px;
+    
+}
+
+nav button{
+    background:none;
+    color:#fff; 
+    cursor: pointer;
+    border: 0;
+    font-family: Ubuntu ;
+    font-size: 1.2em;
+    
+}
+
+.articles{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:30px;
+}
+
+.article{
+    padding:10px;
+    border: 1px solid #D67940;
+    position: relative;
+    padding-bottom:40px;
+    
+}
+
+.article h2{
+    font-size:2em;
+}
+
+.article .author{
+    padding: 10px;
+    background: #D67940;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    margin:0;
+}
+.article-detail .article{
+    padding:0;
+}
+.article-detail .article img{
+    max-width:100%;
+}
+
+.article-detail .article h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size:2em;
+    
+}
+.article-detail .article p{
+    text-align:center;
+
+}
+
+.site-form{
+    margin-top:60px;
+    border:1px solid #D67940;
+    padding:20px;
+}
+.site-form input,.site-form textarea
+{
+    display:block;
+    padding:5px;
+}
+a.highlight{
+    border:1px solid #D67940;
+    padding:10px;
+    border-radius:4px;
+    color: #D67940;
+    
+}
+.helptext, .helptext ul{
+    margin:0 auto 20px ;
+    font-size:0.9em;
+    display:block;
+    border-radius:4px;
+    margin:10px 0;
+    
+}
+
+.errorlist li{
+    padding:10px;
+    list-style-type: None;
+    color: #ff5722;
+    
+}
+.errorlist{
+    padding:0;
+}
+
+.site-form input[type="submit"]{
+    background:#D67940;
+    border:0;
+    color: #fff;
+    font-size:1.0em;
+    border-radius: 4px;
+    margin: 10px 0;
+    
+    
+}

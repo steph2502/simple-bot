@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "manage.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" }
+      },
+      {
+        "src": "accounts/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb","runtime": "python3.9" }
+      },
+      {
+        "src": "telegram_bot/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb","runtime": "python3.9" }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/accounts/(.*)",
+        "dest": "accounts/wsgi.py"
+      },
+      {
+        "src": "/telegram_bot/(.*)",
+        "dest": "telegram_bot/wsgi.py"
+      }
+    ]
+}

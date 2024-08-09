@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+
+
+{% block content %}
+    <h2>Start Creating new Articles here🚀🚀</h2>
+    <form class="site-form" action="{%url 'articles:add'%}" method="post" enctype="multipart/form-data"> 
+        {% csrf_token%}  
+        {{form}}
+        <input type="submit" value="Create">
+    </form>
+    <script scr = "/static/slugify.js"></script>
+
+{% endblock %}
+
+
+
