@@ -28,8 +28,8 @@
       }
     ],
      "env": {
-    "DJANGO_SETTINGS_MODULE": "project_name.settings",
+    "DJANGO_SETTINGS_MODULE": "my_first_bot.settings",
     "SECRET_KEY": "django-insecure-it&jt=hi1kv)(bia8^nf-yxt(lov&f=ai5!lmv68f7t7z3qpam",
-    "ALLOWED_HOSTS": "your-vercel-domain.vercel.app"
+    "ALLOWED_HOSTS": ".vercel.app"
   }
 }
