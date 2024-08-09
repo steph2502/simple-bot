@@ -26,5 +26,10 @@
         "src": "/telegram_bot/(.*)",
         "dest": "telegram_bot/wsgi.py"
       }
-    ]
+    ],
+     "env": {
+    "DJANGO_SETTINGS_MODULE": "project_name.settings",
+    "SECRET_KEY": "django-insecure-it&jt=hi1kv)(bia8^nf-yxt(lov&f=ai5!lmv68f7t7z3qpam",
+    "ALLOWED_HOSTS": "your-vercel-domain.vercel.app"
+  }
 }
