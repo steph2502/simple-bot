@@ -1,35 +1,39 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "manage.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb" }
-      },
-      {
-        "src": "accounts/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb","runtime": "python3.9" }
-      },
-      {
-        "src": "telegram_bot/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb","runtime": "python3.9" }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/accounts/(.*)",
-        "dest": "accounts/wsgi.py"
-      },
-      {
-        "src": "/telegram_bot/(.*)",
-        "dest": "telegram_bot/wsgi.py"
-      }
-    ],
-     "env": {
+  "version": 2,
+  "builds": [
+    {
+      "src": "manage.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb" }
+    },
+    {
+      "src": "accounts/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": "telegram_bot/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/accounts/(.*)",
+      "dest": "accounts/wsgi.py"
+    },
+    {
+      "src": "/telegram_bot/(.*)",
+      "dest": "telegram_bot/wsgi.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/staticfiles/$1"
+    }
+  ],
+  "env": {
     "DJANGO_SETTINGS_MODULE": "my_first_bot.settings",
     "SECRET_KEY": "django-insecure-it&jt=hi1kv)(bia8^nf-yxt(lov&f=ai5!lmv68f7t7z3qpam",
-    "ALLOWED_HOSTS": ".vercel.app"
+    "ALLOWED_HOSTS": "127.0.0.1, .vercel.app"
   }
 }
