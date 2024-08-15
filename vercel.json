@@ -28,7 +28,7 @@
     },
     {
       "src": "/static/(.*)",
-      "dest": "/staticfiles/$1"
+      "dest": "/mystaticfiles/$1"
     }
   ],
   "env": {
